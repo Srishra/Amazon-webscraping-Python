@@ -2,14 +2,8 @@
 This script is designed to scrape the price of a product from Amazon and send an email notification if the price drops below a certain threshold.
 
 ## Prerequisites
-Before running the script, make sure you have the following installed:
-- Python (version 3.6 or higher)
-- BeautifulSoup library (`beautifulsoup4`)
-- Requests library (`requests`)
-- `smtplib` library for sending emails
-- 
-Install the required dependencies using pip: pip install -r requirements.txt:
 
+Install the required dependencies using pip: pip install -r requirements.txt:
 
 ## Configuration
 
