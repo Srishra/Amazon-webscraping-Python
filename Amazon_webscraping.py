@@ -6,8 +6,10 @@ from bs4 import BeautifulSoup
 from time import sleep
 import smtplib
 import re
+import os
 
-
+cwd = os.getcwd()
+csv_path = os.path.join(cwd,'AmazonWebScraper_hairdresser.csv')
 # Code for sending the email...
 
 def send_email(title, price):
@@ -66,7 +68,7 @@ def check_price():
     data = [title, price, today, current_time]
 
     # Check if the file is empty and write the header row
-    with open(r'C:\Users\rrohi\Desktop\srinika\AmazonWebScraper_hairdresser.csv', 'a+', newline='', encoding='UTF8') as f:
+    with open(csv_path, 'a+', newline='', encoding='UTF8') as f:
         writer = csv.writer(f)
         if f.tell() == 0:
             writer.writerow(header)
