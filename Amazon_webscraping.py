@@ -6,6 +6,10 @@ from bs4 import BeautifulSoup
 from time import sleep
 import smtplib
 import re
+import os
+
+cwd = os.getcwd()  # Gets the current working directory
+csv_path = os.path.join(cwd,'AmazonWebScraper_ipad.csv') 
 
 desired_price = # Enter your desired price value as an Integer
 
@@ -67,7 +71,7 @@ def check_price():
     data = [title, price, today, current_time]
 
     # Check if the file is empty and write the header row
-    with open('AmazonWebScraper_ipad.csv', 'a+', newline='', encoding='UTF8') as f:
+    with open(csv_path, 'a+', newline='', encoding='UTF8') as f:
         writer = csv.writer(f)
         if f.tell() == 0:
             writer.writerow(header)
