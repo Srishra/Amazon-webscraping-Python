@@ -7,6 +7,7 @@ from time import sleep
 import smtplib
 import re
 
+desired_price = # Enter your desired price value as an Integer
 
 # Code for sending the email...
 
@@ -59,7 +60,7 @@ def check_price():
         print("Unable to convert price to integer:", price)
         return
 
-    if price_int == 258:
+    if price_int == desired_price:
         send_email(title, price)
 
     header = ['Title', 'Price', 'Date', 'Time']
